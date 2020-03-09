@@ -1,8 +1,9 @@
 import { URLs } from '../utils/config.json'
 import genericPageCMS_page from '../page-objects/pages/genericPageCMS_page';
 import Assert from '../utils/assertions.js';
-
+import coreUtils from '../utils/assertions.js'
 const assert = new Assert();
+const utilities = new coreUtils()
 
 const genericPage = new genericPageCMS_page()
 
@@ -31,7 +32,8 @@ test.only
 
       //Verification... if the elemnt exists or not
       //await t.expect(abc.exists).ok()
-      await assert.isOk(abc);
+      await assert.isOk(abc); 
+      
   });
 
 
