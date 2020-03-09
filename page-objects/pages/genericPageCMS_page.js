@@ -2,6 +2,9 @@ import { Selector, t } from 'testcafe'
 import { genericPageLoc } from '../../locators/locators.json';
 import { collectionsPageLoc } from '../../locators/locators.json';
 import { ClientFunction } from 'testcafe';
+import coreUtils from '../../utils/coreUtils'
+
+const utilities= new coreUtils()
 
 
 class genericPageCMS {
@@ -34,13 +37,15 @@ class genericPageCMS {
         await t.click(collectionsPageLoc.loginButton)
                .typeText(collectionsPageLoc.searchCollection, title, { paste: true })
                .pressKey("enter")
-               .wait(1000)
+               //.wait(1000)
+               utilities.miniShortWait()
             const elements = await Selector(collectionsPageLoc.collectionList); //get multiple results
             const elementCount = await elements.count
             for (let i = 0; i < elementCount; i++) 
             {
                 await t.click(elements.nth(i))
-                .wait(1000)
+                utilities.miniShortWait()
+                //.wait(1000)
                 const goBack = ClientFunction(() => window.history.back());
                 await goBack();
             }
@@ -50,8 +55,10 @@ class genericPageCMS {
     async deletePage(title) {
     await t.click(collectionsPageLoc.loginButton)
            .typeText(collectionsPageLoc.searchCollection, title, { paste: true })
-           .pressKey("enter")
-           .wait(1000)
+           //.pressKey("enter")
+           utilities.pressKey("enter")
+           utilities.miniShortWait()
+           //.wait(1000)
         const elements = await Selector(collectionsPageLoc.collectionList); //get multiple results
         const elementCount = await elements.count
         for (let i = 0; i < elementCount; i++) 

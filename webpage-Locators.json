@@ -1,9 +1,0 @@
-     {
-     "mainPge" : {
-            "acceptCookie" : "button[id='onetrust-accept-btn-handler']",
-            "menuBtn" : ".navbar-toggle#menubutton",
-            "searchTextBox" : "#smobile_1",
-            "searchResults" : "div>[role='heading']>h1"
-      }
-     
-}

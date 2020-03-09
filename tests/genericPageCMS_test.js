@@ -43,7 +43,7 @@ test
 
 
 // testcase - search and delete a generic page from the collection list
-test
+test.skip
   .meta({ feature: true, genericPage: true })
   ("Delete a Generic Page in Content Management System...", async t => {
     await t
