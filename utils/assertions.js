@@ -37,6 +37,9 @@ export default class Assert {
         await t
             .expect(Selector(element).textContent).contains(message);
     }
+    async isOk(element) {
+        await t.expect(element.exists).ok()
+    }
 
 
 }

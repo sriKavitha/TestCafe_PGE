@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "testcafe chrome ./tests --speed 0.8 -s takeOnFails=true"
+    "test:chrome": "testcafe chrome ./tests --speed 0.9 -s takeOnFails=true"
   },
   "keywords": [
     "TestCafe",

@@ -20,9 +20,11 @@ class genericPageCMS {
             .typeText((genericPageLoc.title), title, { paste: true })
             .typeText(genericPageLoc.section, section, { paste: true })
             .typeText(genericPageLoc.langDropDown, lang)
-            .pressKey('tab')
-            .pressKey('tab')
-            .typeText(genericPageLoc.name, name, { paste: true })
+            //.pressKey('tab')
+            //.pressKey('tab')
+            await utilities.pressKey("tab")
+            await utilities.pressKey("tab")
+            await t.typeText(genericPageLoc.name, name, { paste: true })
             .typeText(genericPageLoc.description, description, { paste: true })
             .typeText(genericPageLoc.body, body, { paste: true })
             .typeText(genericPageLoc.linkSectionHeader, linkSection, { paste: true })
@@ -36,15 +38,16 @@ class genericPageCMS {
     async viewPage(title) {
         await t.click(collectionsPageLoc.loginButton)
                .typeText(collectionsPageLoc.searchCollection, title, { paste: true })
-               .pressKey("enter")
+               await utilities.pressKey("enter")
+               //.pressKey("enter")
                //.wait(1000)
-               utilities.miniShortWait()
+               await utilities.miniShortWait()
             const elements = await Selector(collectionsPageLoc.collectionList); //get multiple results
             const elementCount = await elements.count
             for (let i = 0; i < elementCount; i++) 
             {
                 await t.click(elements.nth(i))
-                utilities.miniShortWait()
+                await utilities.miniShortWait()
                 //.wait(1000)
                 const goBack = ClientFunction(() => window.history.back());
                 await goBack();
@@ -56,16 +59,17 @@ class genericPageCMS {
     await t.click(collectionsPageLoc.loginButton)
            .typeText(collectionsPageLoc.searchCollection, title, { paste: true })
            //.pressKey("enter")
-           utilities.pressKey("enter")
-           utilities.miniShortWait()
+           await utilities.pressKey("enter")
+           await utilities.miniShortWait()
            //.wait(1000)
         const elements = await Selector(collectionsPageLoc.collectionList); //get multiple results
         const elementCount = await elements.count
         for (let i = 0; i < elementCount; i++) 
         {
             await t.click(elements.nth(i))
-            .wait(1000)
-            .setNativeDialogHandler(()=>true)
+            await utilities.miniShortWait()
+            //.wait(1000)
+            await t.setNativeDialogHandler(()=>true)
             .click(genericPageLoc.deleteGenericPage)
         }
 }

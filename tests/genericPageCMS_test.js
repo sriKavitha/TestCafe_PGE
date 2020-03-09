@@ -1,5 +1,8 @@
 import { URLs } from '../utils/config.json'
 import genericPageCMS_page from '../page-objects/pages/genericPageCMS_page';
+import Assert from '../utils/assertions.js';
+
+const assert = new Assert();
 
 const genericPage = new genericPageCMS_page()
 
@@ -18,7 +21,7 @@ fixture('PGE CMS Tests')
 
 
   //  testcase - to create a generic page 
-test
+test.only
   .meta({ feature: true, genericPage: true })
   ("Create a Generic Page via Content Management System...", async t => {
 
@@ -27,7 +30,8 @@ test
       var abc = await genericPage.createPage(title, section, lang, name, description, body, linkSection);
 
       //Verification... if the elemnt exists or not
-      await t.expect(abc.exists).ok()
+      //await t.expect(abc.exists).ok()
+      await assert.isOk(abc);
   });
 
 
@@ -43,7 +47,7 @@ test
 
 
 // testcase - search and delete a generic page from the collection list
-test.skip
+test
   .meta({ feature: true, genericPage: true })
   ("Delete a Generic Page in Content Management System...", async t => {
     await t
