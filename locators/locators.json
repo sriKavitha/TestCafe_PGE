@@ -1,0 +1,24 @@
+     {
+          "genericPageLoc": 
+          {
+               "title": ".css-1prcas7-ControlPaneContainer.e1tnasa20>div:nth-child(1)>input",
+               "section": ".css-1prcas7-ControlPaneContainer.e1tnasa20>div:nth-child(2)>input",
+               "langDropDown": ".css-1hwfws3",
+               "name": ".css-1prcas7-ControlPaneContainer.e1tnasa20>div:nth-child(4)>input",
+               "description": ".css-1prcas7-ControlPaneContainer.e1tnasa20>div:nth-child(7)>input",
+               "body": ".css-15ugu1-StyledP.e19otniy5",
+               "linkSectionHeader": ".css-1prcas7-ControlPaneContainer.e1tnasa20>div:nth-child(9)>input",
+               "publish": ".evqrzhe7.css-1u78kww-StyledWrapper-ToolbarDropdown-buttonMargin.e1d27pw00",
+               "publishNow": "div[role='menu']>ul>div:nth-child(1)",
+               "verifyGenericPageAdded": ".css-epy1pj-BackStatus-BackStatusUnchanged-badge-textBadge-textBadgeSuccess.evqrzhe11",
+               "deleteGenericPage":".css-1ixjrmh-ToolbarButton-button-default-buttonMargin-noOverflow-DeleteButton-lightRed.evqrzhe14"
+          },
+          "collectionsPageLoc":
+          {
+               "loginButton": "#nc-root>div>section>button",
+               "genericPage": ".css-u4olba-SidebarContainer-card.el9l68m0>ul>li:nth-child(5)",
+               "newGenericPage": ".css-xdnvh-CollectionTopRow.enajvhy1>a",
+               "searchCollection":"input[placeholder='Search all']",
+               "collectionList":".css-1l7q1fc-CardsGrid.e1hbvtjf0>li"
+          }
+     }

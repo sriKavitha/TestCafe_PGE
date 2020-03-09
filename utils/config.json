@@ -1,0 +1,7 @@
+{
+        "URLs": 
+        {
+                "devUrl": "http://localhost:1313/admin/#/",
+                "qaUrl": "http://ewp.com/admin/#/"
+        }
+}
